@@ -3,9 +3,13 @@
     ViewBag.Title = "Schedule Events";
 }
 
-    <head>
-        <link href="~/css/main.css" rel="stylesheet" />
-    </head>
+<head>
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+
+@*<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" asp-action="Registration" asp-controller="Home">Register</a>
+</nav>*@
 
 <div class="mt-3 container-xl">
 
@@ -13,117 +17,108 @@
     <div id="Calendar" style="background-color:blanchedalmond">
 
     </div>
-    @*<div class="text-center">
 
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th> Green = Available | Red = Not Available </th>
-
-
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <th>Event Type</th>
-                        <th>Location</th>
-                        <th>Number Of Packs</th>
-                        <th>Time</th>
-
-                    </tr>
-                </thead>
-
-                @foreach (var eEvent in Model.Events)
-                {
-                    <tbody>
-                        <tr>
-                            <th scope="row">@eEvent.Date</th>
-                            <td>@eEvent.EventType</td>
-                            <td>@eEvent.Location</td>
-                            <td>@eEvent.NumOfPeople</td>
-                        </tr>
-                    </tbody>
-                }
-            </table>
-
-        </div>*@
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Schedule Event
-    </button>
 
     <!-- Button trigger modal -->
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Schedule Event</h5>
+                    <h5 class="modal-title" id="myModal">Event</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                }
-
                 <form asp-controller="Calendar" asp-action="Event" method="post">
 
                     <div class="modal-body">
+                        <div class="container-fluid">
 
-                        <div class="form-group col-sm-3">
-                            <label asp-for="StartTime"></label>
-                            <input asp-for="StartTime"
-                                   asp-format="{0:dd/MM/yyyy}" />
-                            <span asp-validation-for="StartTime" class="text-danger"></span>
+                            <div class="row">
+
+                                <div class="form-group col-12">
+                                    <label asp-for="StartTime"> Start Time</label>
+                                    <input asp-for="StartTime"
+                                           asp-format="{0:dd/MM/yyyy}" />
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <label asp-for="EndTime">End Time</label>
+                                    <input asp-for="EndTime"
+                                           asp-format="{0:dd/MM/yyyy}" />
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class=" col-5 ml-auto form-group">
+                                    <label asp-for="EventType">Event Type</label>
+                                    <select asp-for="EventType"
+                                            asp-items="Html.GetEnumSelectList<EventType>()" id="eventType">
+                                        <option value="">Please Select</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-5 ml-auto form-group">
+                                    <label asp-for="Location"></label>
+                                    <select asp-for="Location">
+                                        <option value="53">53 Area Horno</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row form-group">
+                                <div class="col">
+                                    <label asp-for="NumOfPeople">Number of People</label>
+                                    <input placeholder="0" asp-for="NumOfPeople" />
+                                </div>
+                            </div>
+
+
+                            <div class="row form-group">
+                                <div class="col">
+                                    <label asp-for="PocRankName">Rank/Name</label>
+                                    <input asp-for="PocRankName" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col">
+                                    <label asp-for="PocPhoneNumber">Phone Number</label>
+                                    <input asp-for="PocPhoneNumber" />
+                                </div>
+                            </div>
+                                <div class="container-fluid">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="form-group col-sm-3">
-                            <label asp-for="EndTime"></label>
-                            <input asp-for="EndTime"
-                                   asp-format="{0:dd/MM/yyyy}" />
-                            <span asp-validation-for="EndTime" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="EventType"></label>
-                            <select asp-for="EventType"
-                                    asp-items="Html.GetEnumSelectList<EventType>()">
-                                <option value="">Please Select</option>
-                            </select>
-                            <span asp-validation-for="EventType" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Location"></label>
-                            <select asp-for="Location">
-                                <option value="53">53 Area Horno</option>
-                            </select>
-                            <span asp-validation-for="Location" class="text-danger"></span>
-                        </div>
-
-
-                        <div>
-                            <label asp-for="NumOfPeople"></label>
-                            <input asp-for="NumOfPeople" class="col-2" />
-                            <span asp-validation-for="NumOfPeople" class="text-danger"></span>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-
-                    </div>
-
-
-                </form> 
-              
+                </form>
 
             </div>
         </div>
     </div>
 
 
-    <div>
-        <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+
+    <div class=" row">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary col-12 btn-lg" data-toggle="modal" data-target="#myModal">
+                Schedule Event
+            </button>
+        </div>
     </div>
 </div>
 
@@ -132,35 +127,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="~/js/main.js"></script>
 
-
-
     @*Loads blank calendar*@
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('Calendar');
+            //var foobar = document.getElementById('eventType').value;
+            // var color = new FullCalendar.calendar(calendarEl, {eventColor})
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
 
-                    
-                    initialView: 'dayGridMonth',
-                    schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-                    events: '/Calendar/GetEvents',
-                    eventTimeFormat: {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        hour12: false,
-                        meridiem: false
-                    },
-                
-               
-               
 
-              //  eventClick: function (info) { }
+                eventTimeFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                    meridiem: false
+                },
+                initialView: 'dayGridMonth',
+                schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+                eventColor: 'Red',
+                validRange: function (nowDate) {
+                    return {
+                        start: nowDate,
+                    };
+                },
+
+                events: '/Calendar/GetEvents'
+
             });
+
+
+            //if (foobar == 2) {
+            //   view.render();
+            //calendar.eventColor = '#978006'
+            //  }
             calendar.render();
+          // console.log(foobar);
+
         });
 
-    </script>
+</script>
 
 
 }

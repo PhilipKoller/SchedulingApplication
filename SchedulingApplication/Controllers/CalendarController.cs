@@ -28,7 +28,27 @@ namespace SchedulingApplication.Controllers
 
             if (ModelState.IsValid)
             {
-                _eventRepository.Add(eEvent);
+                
+                if (eEvent.EventType == EventType.PT)
+                {
+                    eEvent.Color = "Blue";
+                    _eventRepository.Add(eEvent);
+                }
+                else if (eEvent.EventType == EventType.SQBASIC || eEvent.EventType == EventType.SQINTERMEDIATE)
+                {
+                    eEvent.Color = "Green";
+                    _eventRepository.Add(eEvent);
+                }
+                else if (eEvent.EventType == EventType.WSA)
+                {
+                    eEvent.Color = "Purple";
+                    _eventRepository.Add(eEvent);
+                }
+                else if(eEvent.EventType == EventType.OTHER)
+                {
+                    eEvent.Color = "Black";
+                    _eventRepository.Add(eEvent);
+                }
             }
 
             return View();
@@ -39,19 +59,29 @@ namespace SchedulingApplication.Controllers
         {
             IEnumerable<Event> events = _eventRepository.GetAllEvents();
 
-            var eEvents = events.Select(e => new {
-            id = e.ID , 
-            title = e.EventType.ToString(),
-            start = e.StartTime.ToString("yyyy-MM-ddTHH:mm"),
-            end = e.EndTime.ToString("yyyy-MM-ddTHH:mm"),
-            numberOfPeople = e.NumOfPeople,
-            location = e.Location,
-            Poc = e.Poc,
+            var enumEvent = events.Select(e => e.EventType.Value);
 
-            
+
+            var eEvents = events.Select(e => new
+            {
+                id = e.ID,
+                title = e.EventType.ToString() + " | " + e.NumOfPeople + "PAX" + " | POC: " + e.PocRankName,
+                start = e.StartTime.ToString("yyyy-MM-ddTHH:mm"),
+                end = e.EndTime.ToString("yyyy-MM-ddTHH:mm"),
+                numberOfPeople = e.NumOfPeople,
+                color = e.Color,
+                location = e.Location,
+                PocRankName = e.PocRankName,
+                PocPhoneNumber = e.PocPhoneNumber
+
+
             });
-            return new JsonResult(eEvents);
 
-        }
+            return new JsonResult(eEvents);
+           
+
+        }    
+
+        
     }
 }

@@ -14,7 +14,8 @@ namespace SchedulingApplication.Models
         public string Email { get; set; }
 
 
-        [Required, MaxLength(50)]
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public string Phone { get; set; }
@@ -25,10 +26,10 @@ namespace SchedulingApplication.Models
         [Required]
         public Rank? Rank { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required(ErrorMessage = "First Name Is Required"), MaxLength(50)]
         public string FirstName { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required(ErrorMessage = "Last Name Required"), MaxLength(50)]
         public string LastName { get; set; }
 
   

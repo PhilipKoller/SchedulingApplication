@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/schedulingserver/databases/SchedulingDB",
+      "type": "mssql.azure",
+      "connectionId": "ScheduleDBConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

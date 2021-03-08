@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using SchedulingApplication.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace SchedulingApplication
 {
@@ -25,6 +26,16 @@ namespace SchedulingApplication
             services.AddMvc(options => options.EnableEndpointRouting = false).AddXmlDataContractSerializerFormatters();
             services.AddScoped<IUserRepository, SQLUserRepository>();
             services.AddScoped<IEventRepository, SQLEventRepository>();
+
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 4;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireNonAlphanumeric = false;
+            }).AddEntityFrameworkStores<AppDbContext>();
+        
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +48,7 @@ namespace SchedulingApplication
 
 
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
 
             //app.UseMvc(routes =>

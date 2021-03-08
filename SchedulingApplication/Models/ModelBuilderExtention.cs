@@ -21,15 +21,19 @@ namespace SchedulingApplication.Models
 
                 }  
             );
-            // ------------- SEED Data for Calendar Events ---------
+            //-------------SEED Data for Calendar Events ---------
             //modelBuilder.Entity<Event>().HasData(
             //    new Event
             //    {
             //        ID = 1,
-
+            //        EventType = EventType.PT,
+            //        StartTime = System.DateTime.Now,
+            //        EndTime = System.DateTime.Now,
+            //        Color = "Purple",
             //        Location = Area.CampHorno,
             //        NumOfPeople = 95,
-            //        Poc = "Miller 972-523-4343"
+            //        PocRankName = "phil",
+            //        PocPhoneNumber = "972-523-4343"
             //    }
             //    );
 
@@ -74,7 +78,7 @@ namespace SchedulingApplication.Models
             //    }
             //    );
 
-         
+
         }
     }
 }

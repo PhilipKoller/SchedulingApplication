@@ -3,28 +3,44 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SchedulingApplication.Models
 {
+    public class CustomDateAttribute : RangeAttribute
+    {
+        public CustomDateAttribute()
+          : base(typeof(DateTime),
+                 DateTime.Now.ToShortDateString(),
+                  DateTime.Now.AddYears(+6).ToShortDateString()
+                 
+                )
+        { }
+    }
     public class Event
     {
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please specify an event type")]
         public EventType? EventType { get; set; }
 
         [Required]
         public Area? Location { get; set; }
 
-        [Range(typeof(DateTime), "1/2/2004", "3/4/2019",
-      ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        public string Color { get; set; }
+        
+       [CustomDate]
         public DateTime StartTime { get; set; }
 
-        [Range(typeof(DateTime), "1/2/2004", "3/4/2019",
-       ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        [CustomDate]
         public DateTime EndTime { get; set; }
 
-      [Required]
+        [Required]
+        [Range(0, 200, ErrorMessage = "Please enter a number between 0 and 200.")]
         public int NumOfPeople { get; set; }
 
-        public string  Poc { get; set; }
+        [Required(ErrorMessage = "Please provide a point of contact")]
+        public string PocRankName { get; set; }
+
+        [Required(ErrorMessage ="Please enter a valid phone number"), Phone]
+        public string PocPhoneNumber { get; set; }
+
 
 
         /*
