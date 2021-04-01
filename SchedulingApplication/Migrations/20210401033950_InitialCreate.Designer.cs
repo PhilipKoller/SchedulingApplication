@@ -10,8 +10,8 @@ using SchedulingApplication.Models;
 namespace SchedulingApplication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201104054145_Trump2020")]
-    partial class Trump2020
+    [Migration("20210401033950_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

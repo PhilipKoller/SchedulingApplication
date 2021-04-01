@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SchedulingApplication.Migrations
 {
-    public partial class foobar : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -190,11 +190,6 @@ namespace SchedulingApplication.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "Events",
-                columns: new[] { "ID", "Color", "EndTime", "EventType", "Location", "NumOfPeople", "PocPhoneNumber", "PocRankName", "StartTime" },
-                values: new object[] { 1, "Purple", new DateTime(2020, 11, 3, 21, 26, 50, 609, DateTimeKind.Local).AddTicks(8445), 0, 53, 95, "972-523-4343", "phil", new DateTime(2020, 11, 3, 21, 26, 50, 608, DateTimeKind.Local).AddTicks(507) });
 
             migrationBuilder.InsertData(
                 table: "Users",

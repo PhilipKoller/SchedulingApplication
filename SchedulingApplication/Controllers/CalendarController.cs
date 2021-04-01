@@ -3,10 +3,12 @@ using SchedulingApplication.Models;
 using SchedulingApplication.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+
 namespace SchedulingApplication.Controllers
 {
+    [Authorize]
     public class CalendarController : Controller
     {
         private IEventRepository _eventRepository;
@@ -16,6 +18,7 @@ namespace SchedulingApplication.Controllers
           
         }
         [HttpGet]
+ 
         public IActionResult Event()
         {
             Event eEvent = new Event();

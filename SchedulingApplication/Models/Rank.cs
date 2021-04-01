@@ -16,7 +16,6 @@ namespace SchedulingApplication.Models
         lstSgt ,
         MGySgt,
         SgtMaj
-
         // https://classroom.synonym.com/abbreviations-for-military-ranks-13583770.html
     }
 }
