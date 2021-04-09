@@ -30,70 +30,73 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form asp-controller="Calendar" asp-action="Event" method="post">
 
-                    <div class="modal-body">
-                        <div class="container-fluid">
+              
 
-                            <div class="row">
+                    <form asp-controller="Calendar" asp-action="Event" method="post">
 
-                                <div class="form-group col-12">
-                                    <label asp-for="StartTime"> Start Time</label>
-                                    <input asp-for="StartTime"
-                                           asp-format="{0:dd/MM/yyyy}" />
-                                </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
 
-                                <div class="form-group col-12">
-                                    <label asp-for="EndTime">End Time</label>
-                                    <input asp-for="EndTime"
-                                           asp-format="{0:dd/MM/yyyy}" />
-                                </div>
+                                <div class="row">
 
-                            </div>
+                                    <div class="form-group col-12">
+                                        <label asp-for="StartTime"> Start Time</label>
+                                        <input asp-for="StartTime"
+                                               asp-format="{0:dd/MM/yyyy}" />
+                                    </div>
 
+                                    <div class="form-group col-12">
+                                        <label asp-for="EndTime">End Time</label>
+                                        <input asp-for="EndTime"
+                                               asp-format="{0:dd/MM/yyyy}" />
+                                    </div>
 
-                            <div class="row">
-                                <div class=" col-5 ml-auto form-group">
-                                    <label asp-for="EventType">Event Type</label>
-                                    <select asp-for="EventType"
-                                            asp-items="Html.GetEnumSelectList<EventType>()" id="eventType">
-                                        <option value="">Please Select</option>
-                                    </select>
                                 </div>
 
 
-                                <div class="col-5 ml-auto form-group">
-                                    <label asp-for="Location"></label>
-                                    <select asp-for="Location">
-                                        <option value="53">53 Area Horno</option>
-                                    </select>
+                                <div class="row">
+                                    <div class=" col-5 ml-auto form-group">
+                                        <label asp-for="EventType">Event Type</label>
+                                        <select asp-for="EventType"
+                                                asp-items="Html.GetEnumSelectList<EventType>()" id="eventType">
+                                            <option value="">Please Select</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-5 ml-auto form-group">
+                                        <label asp-for="Location"></label>
+                                        <select asp-for="Location">
+                                            <option value="53">53 Area Horno</option>
+                                        </select>
+                                    </div>
+
                                 </div>
 
-                            </div>
 
 
-
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label asp-for="NumOfPeople">Number of People</label>
-                                    <input placeholder="0" asp-for="NumOfPeople" />
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <label asp-for="NumOfPeople">Number of People</label>
+                                        <input placeholder="0" asp-for="NumOfPeople" />
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label asp-for="PocRankName">Rank/Name</label>
-                                    <input asp-for="PocRankName" />
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <label asp-for="PocRankName">Rank/Name</label>
+                                        <input asp-for="PocRankName" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label asp-for="PocPhoneNumber">Phone Number</label>
-                                    <input asp-for="PocPhoneNumber" />
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <label asp-for="PocPhoneNumber">Phone Number</label>
+                                        <input asp-for="PocPhoneNumber" />
+                                    </div>
                                 </div>
-                            </div>
                                 <div class="container-fluid">
                                     <div asp-validation-summary="All" class="text-danger"></div>
                                 </div>
@@ -105,7 +108,7 @@
 
                             </div>
                         </div>
-                </form>
+                    </form>
 
             </div>
         </div>
@@ -157,12 +160,8 @@
             });
 
 
-            //if (foobar == 2) {
-            //   view.render();
-            //calendar.eventColor = '#978006'
-            //  }
             calendar.render();
-          // console.log(foobar);
+
 
         });
 
