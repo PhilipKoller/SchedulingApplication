@@ -18,7 +18,7 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="stories"></a>
 ## User Stories & Use Cases
-[Click here for stories](http://github.com/PhilipKoller/SchedulingApp/blob/master/userstories.md) | [Click here for cases](http://github.com/PhilipKoller/SchedulingApp/blob/master/usercases.md)
+[Click here for stories](https://github.com/PhilipKoller/SchedulingApplication/blob/c1b4ad8d05608ca5f4932be7bb6dce5643687e53/userstories.md) | [Click here for cases](https://github.com/PhilipKoller/SchedulingApplication/blob/c1b4ad8d05608ca5f4932be7bb6dce5643687e53/usercases.md)
 
 
 
