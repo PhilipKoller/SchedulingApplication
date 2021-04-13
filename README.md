@@ -26,29 +26,29 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="cases"></a>
 ## Requirements & Test Plan
- [Click here for requirements](http://github.com/PhilipKoller/SchedulingApp/blob/master/requirements.md) | [Click here for test plan](http://github.com/PhilipKoller/SchedulingApp/blob/master/testplan.md)
+ [Click here for requirements](http://github.com/PhilipKoller/SchedulingApplication/blob/master/requirements.md) | [Click here for test plan](http://github.com/PhilipKoller/SchedulingApp/blob/master/testplan.md)
 
 # <a name="proto"></a>
 ## Prototype 
-[Click here for prototype](http://github.com/PhilipKoller/SchedulingApp/blob/master/Prototype/)
+[Click here for prototype](http://github.com/PhilipKoller/SchedulingApplication/blob/master/Prototype/)
 
 
 
 # <a name="casesDiagram"></a>
 ### Use-Case Diagram
-![alt text](https://github.com/PhilipKoller/SchedulingApp/blob/master/_Use_Case_Diagram.png?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/_Use_Case_Diagram.png?raw=true)
 
 
 
 # <a name="wire"></a>
 ### Wire-Frame(DRAFT)
-![alt text](https://github.com/PhilipKoller/SchedulingApp/blob/master/Wire-Frame(DRAFT).PNG?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/Wire-Frame(DRAFT).PNG?raw=true)
 
 
 
 # <a name="database"></a>
 ### Conceptual Database Diagram
-![alt text](https://github.com/PhilipKoller/SchedulingApp/blob/master/Database_Diagram.PNG?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/Database_Diagram.PNG?raw=true)
 
 
  [Table of contents](#top)
