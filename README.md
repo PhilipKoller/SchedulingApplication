@@ -42,13 +42,13 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="wire"></a>
 ### Wire-Frame(DRAFT)
-![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/Wire-Frame(DRAFT).PNG?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/46b6363c66599d6db73ffca7bb4823f24a8965aa/Wire-Frame(DRAFT).PNG)
 
 
 
 # <a name="database"></a>
 ### Conceptual Database Diagram
-![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/Database_Diagram.PNG?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/46b6363c66599d6db73ffca7bb4823f24a8965aa/Database_Diagram.PNG)
 
 
  [Table of contents](#top)
