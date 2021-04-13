@@ -25,7 +25,7 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="cases"></a>
 ## Requirements & Test Plan
- [Click here for requirements](http://github.com/PhilipKoller/SchedulingApplication/blob/master/requirements.md) | [Click here for test plan](http://github.com/PhilipKoller/SchedulingApp/blob/master/testplan.md)
+ [Click here for requirements](http://github.com/PhilipKoller/SchedulingApplication/blob/master/requirements.md) | [Click here for test plan](https://github.com/PhilipKoller/SchedulingApplication/blob/012ad99b0071987152e180cabaa1bab0dc2e2411/testplan.md)
 
 # <a name="proto"></a>
 ## Prototype 
