@@ -16,8 +16,6 @@ Table of contents
 The scheduling application is a switch from paper scheduling to online scheduling for all pools in the camp Pendleton area.
 The goal is to have a simplistic design, accomplish the basic task of scheduling and allowing for basic edits and modification from the pool staff.
 
-## Application live : https://schedulingapplication.azurewebsites.net
-
 
 # <a name="stories"></a>
 ## User Stories & Use Cases
