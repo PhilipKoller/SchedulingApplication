@@ -36,7 +36,7 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="casesDiagram"></a>
 ### Use-Case Diagram
-![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/master/_Use_Case_Diagram.png?raw=true)
+![alt text](https://github.com/PhilipKoller/SchedulingApplication/blob/_Use_Case_Diagram.png)
 
 
 
