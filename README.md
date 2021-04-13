@@ -9,7 +9,6 @@ Table of contents
    [Use Case Diagram](#casesDiagram)|
    [Wire-Frame](#wire)|
    [Data Base Diagram](#database) |
-   [Source Code](http://github.com/PhilipKoller/SchedulingApp/blob/master/SchedulingAPP/SchedulingAPP/)|
 
 
 # SchedulingApp
