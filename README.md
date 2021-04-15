@@ -18,7 +18,7 @@ The goal is to have a simplistic design, accomplish the basic task of scheduling
 
 # <a name="new"></a>
 # What's New?
-Front End Is getting a makeover checkout the html [Here](https://github.com/PhilipKoller/SchedulingApplication/blob/3ef01ae87a5c968842b99ece622d5944c1d91ef8/Front%20End/index.html). This will be implemented into the project soon.
+Front End Is getting a makeover checkout the html [Here](https://philipkoller.github.io/SchedulingApplication/). This will be implemented into the project soon.
 
 
 # <a name="stories"></a>
