@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>TTU Pool Scheduler</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="css/heading.css">
+        <link rel="stylesheet" href="css/body.css">
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">TTU POOL SCHEDULER</a>
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#login">LOGIN</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#staff">STAFF</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<header class="masthead bg-primary text-white text-center">
+            <div id="ttuLogo"class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img  class="masthead-image mb-5" src="assets/img/ttulogo.svg" alt="">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">TTU POOL SCHEDULER</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-anchor mb-1"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">EVENT-PT-SQ </p>
+            </div>
+        </header>
+		 <section class="page-section text-black mb-0 " id="login">
+            <div class="container login-container">
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-black">LOGIN</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-dark">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-anchor mb-1"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Login Section Content-->
+                <div class="text-center">
+                    <form style="max-width:420px; margin:auto;">
+                        <label for="emailAddress"class="sr-only">Email address</label>
+                        <input type="email" id="emailAddress" class="form-control mb-2" placeholder="Email Address" required >
+                        
+                        <label for="password"class="sr-only">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Password"  class="form-control" required >
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input id="rememberme" type="checkbox"
+                                value="remember-me"> Remember me | 
+                            </label> <a id="newUser" style="color: blue; text-decoration: underline;"  data-toggle="collapse" data-target="#newUserCollapse" aria-expanded="false" aria-controls="newUser"> New User</a>
+                        </div>
+                        <div class="mt-3" id="loginBtn">
+                          <button class="btn btn-lg btn-secondary btn-block">Login</button>
+                      </div>
+                    </form>
+                    <form style="max-width:420px; margin:auto;">
+                       <!--Collapsable New User Box-->
+                        <div class="collapse" id="newUserCollapse">
+                          <label for="firstName"class="sr-only">First Name</label>
+                          <input type="text" id="firstName" class="form-control mb-2" placeholder="First Name" required autofocus>
+                          <label for="lastName"class="sr-only">Last Name</label>
+                          <input type="text" id="lastName" class="form-control mb-2" placeholder="Last Name" required autofocus>
+                          <label for="emailAddress"class="sr-only">Email address</label>
+                          <input type="email" id="emailAddress" class="form-control mb-2" placeholder="Email Address" required autofocus>
+                          <label for="password"class="sr-only">Password</label>
+                        <input type="password" id="password" class="form-control mb-2" placeholder="Password" class="form-control" required autofocus>
+                          <label for="area">Select Area:</label>
+                          <select name="area" id="area">
+                            <option value="53">53 Area Camp Horno</option>
+                            <option value="52">52 Area SOI</option>
+                          </select>
+                          <label for="rank">Select Rank:</label>
+                          <select name="rank" id="rank">
+                            <option value="pvt">Pvt</option>
+                            <option value="pfc">Pfc</option>
+                            <option value="lcpl">Lcpl</option>
+                          </select>
+                        </div>
+                        <div class="mt-3" id="registerBtn" >
+                            <button class="btn btn-lg btn-secondary btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div> 
+			</div> 				
+		  </section>
+             <!--Porfolio-->
+	<section class="page-section portfolio bg-primary text-white" id="staff">
+        <div class="container">
+            <!--Portfolio Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-center text-uppercase mb-0">MEET THE STAFF</h2>
+            </div>
+            <!--Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-anchor mb-1"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto text-center" data-toggle="modal" data-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/avataaars1.svg" alt="Instructor 1" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto text-center" data-toggle="modal" data-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/avataaars2.svg" alt="Instructor 2" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto text-center" data-toggle="modal" data-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/avataaars3.svg" alt="Instructor 3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+		 <!-- Portfolio Modal-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                <div class="modal-body text-center">
+                    <div class="contianer">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary mb-0">INSTRUCTOR 1</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/avataaars1.svg" alt="Instructor 1" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Instructor 2</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/avataaars2.svg" alt="Instructor 2" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <button class="btn btn-primary" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Instructor 3</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/avataaars3.svg" alt="Instructor 3" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <button class="btn btn-primary" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		  
+		  <!--Contact-->
+		  <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-anchor mb-1"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="text-muted">Phone</div>
+                            <div class="lead font-weight-bold">(972) 523-4007</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                        <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                        <div class="text-muted">Email</div>
+							<a class="lead font-weight-bold" href="mailto:name@example.com">philip.koller@outlook.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+          <div class="container"><small class="pre-wrap">Copyright © 2020 Philip Koller</small></div>
+      </section>
+      <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+      <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+      <!-- Bootstrap core JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+      <!-- Third party plugin JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <!-- Contact form JS-->
+      <script src="assets/mail/jqBootstrapValidation.js"></script>
+      <script src="assets/mail/contact_me.js"></script>
+      <!-- Core theme JS-->
+      <script src="js/scripts.js"></script>
+	  </body>
+  </html>
