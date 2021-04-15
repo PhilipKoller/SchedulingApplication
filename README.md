@@ -9,13 +9,15 @@ Table of contents
    [Use Case Diagram](#casesDiagram)|
    [Wire-Frame](#wire)|
    [Data Base Diagram](#database) |
+   [What's new](#new) |
 
 
 # SchedulingApp
 The scheduling application is a switch from paper scheduling to online scheduling for all pools in the camp Pendleton area.
 The goal is to have a simplistic design, accomplish the basic task of scheduling and allowing for basic edits and modification from the pool staff.
 
-#Whats New?
+# <a name="new"></a>
+# What's New?
 Front End Is getting a makeover checkout the html [Here](https://github.com/PhilipKoller/SchedulingApplication/blob/c1b4ad8d05608ca5f4932be7bb6dce5643687e53/userstories.md). This will be implemented into the project soon.
 
 
